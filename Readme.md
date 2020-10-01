@@ -3,14 +3,18 @@
 This is a continuation, find [part 1 here](https://github.com/thedrlambda/java-microservices-project).
 
 ## Continuing from part 1
-Add my advert service to your microservice system from last time.
+We need to add my advert service to your microservice system from last time.
+
+Go to https://github.com/thedrlambda/adify-service and fork the repo.
+
+Clone it to your local machine.
+
+You can now run it locally like we did in part 1.
 
 ## Continuous deployment
 
 ### Step 1: Automated integration
-Protect `master` from direct pushing.
-
-On push deploy to a branch compile, if no errors merge into `master`.
+Create a workflow file specifying that on push to a ready branch (`ready/**`), then compile the code, if there are no errors merge the branch into `master`.
 
 ### Step 2: Automated deploy
 
