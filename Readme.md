@@ -43,7 +43,7 @@ jobs:
           fetch-depth: 0
 
       - name: Compile
-        run: mvn install -DskipTests
+        run: mvn install
 ```
 
 ### Step 1: Automated integration
@@ -69,7 +69,7 @@ git push origin [BRANCH]:ready/[BRANCH]
 Add running fast tests to branch pipeline.
 
 ```
-mvn test -Dgroups=fast
+mvn test -DskipTests=false -Dgroups=fast
 ```
 
 ### Step 3: Automated deploy
@@ -81,7 +81,7 @@ Create a second workflow, where on push to `master` deploy to Heroku. See this f
 Modify the second workflow, so on push to `master` run slow tests, if no errors merge into `release`.
 
 ```
-mvn test -Dgroups=slow
+mvn test -DskipTests=false -Dgroups=slow
 ```
 
 Create a third workflow, where on push to `release` deploy to Heroku.
