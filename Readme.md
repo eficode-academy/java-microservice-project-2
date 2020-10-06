@@ -15,6 +15,8 @@ You can now run it locally like we did in part 1.
 
 ### Step 0: Compile
 
+Generate a personal access token on github with access to public repos. Put the token into a repo secret in your forked repo. 
+
 Create a workflow file `.github/workflows/continuous-integration.yml`. With a name of the workflow:
 
 ```
@@ -41,6 +43,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          token: ${{secrets.[Your secret name]}}
 
       - name: Compile
         run: mvn install
