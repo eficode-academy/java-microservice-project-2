@@ -1,11 +1,11 @@
 # Microservice Project Part 2
 
-This is a continuation, find [part 1 here](https://github.com/thedrlambda/java-microservices-project).
+This is a continuation, find [part 1 here](https://github.com/eficode-academy/java-microservices-project).
 
 ## Continuing from part 1
 We need to add my advert service to your microservice system from last time.
 
-Go to https://github.com/thedrlambda/adify-service and fork the repo.
+Go to https://github.com/eficode-academy/adify-service and fork the repo.
 
 Clone it to your local machine.
 
